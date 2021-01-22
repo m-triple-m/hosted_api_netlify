@@ -2,6 +2,12 @@ const express = require('express');
 const router = express.Router();
 const Model = require('../models/userModel');
 
+router.get("/", (req, res) => {
+    res.json({
+        hello: "hi!"
+    });
+});
+
 router.get('/getall', (req, res) => {
 
     Model.find()
